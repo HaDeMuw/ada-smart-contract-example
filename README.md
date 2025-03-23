@@ -1,7 +1,7 @@
 # 🚀 Примеры смарт-контрактов Cardano (Plutus)
 
 <p align="center">
-  <img src="https://imgur.com/HIkhfjN" alt="Cardano Logo">
+  <img src="https://i.imgur.com/HIkhfjN.png" alt="Cardano Logo">
 </p>
 
 <p align="center">
