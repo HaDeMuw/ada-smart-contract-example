@@ -1,7 +1,7 @@
 # 🚀 Примеры смарт-контрактов Cardano (Plutus)
 
 <p align="center">
-  <img src="https://cialu.net/wp-content/uploads/2019/12/cardano-crypto-ada-1920x480.png" alt="Cardano Logo">
+  <img src="https://imgur.com/HIkhfjN" alt="Cardano Logo">
 </p>
 
 <p align="center">
