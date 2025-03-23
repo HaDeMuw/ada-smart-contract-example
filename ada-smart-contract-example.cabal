@@ -1,0 +1,83 @@
+cabal-version:      3.0
+name:               ada-smart-contract-example
+version:            0.1.0.0
+synopsis:           Примеры смарт-контрактов на языке Plutus для блокчейна Cardano
+description:        Этот проект содержит различные примеры смарт-контрактов для блокчейна Cardano,
+                    написанные на языке Plutus. Примеры включают токены, многоподписные контракты,
+                    NFT маркетплейс и DeFi пул ликвидности.
+
+license:            MIT
+license-file:       LICENSE
+author:             HaDeMuw
+maintainer:         support@example.com
+category:           Blockchain
+build-type:         Simple
+extra-source-files: README.md
+                    CHANGELOG.md
+
+common common-options
+  default-language:   Haskell2010
+  default-extensions: NoImplicitPrelude
+                      OverloadedStrings
+                      TemplateHaskell
+                      TypeApplications
+                      TypeFamilies
+                      DeriveGeneric
+                      DeriveAnyClass
+                      DerivingStrategies
+                      ScopedTypeVariables
+                      DataKinds
+                      FlexibleContexts
+                      MultiParamTypeClasses
+  ghc-options:        -Wall -fobject-code -fno-ignore-interface-pragmas
+                      -fno-omit-interface-pragmas -fno-specialise
+
+library
+  import:          common-options
+  exposed-modules: TokenPolicy
+                    TokenOperations
+                    MultiSigTypes
+  build-depends:   base >= 4.14 && < 5
+                 , aeson
+                 , bytestring
+                 , containers
+                 , freer-extras
+                 , playground-common
+                 , plutus-contract
+                 , plutus-ledger
+                 , plutus-ledger-api
+                 , plutus-ledger-constraints
+                 , plutus-tx
+                 , plutus-tx-plugin
+                 , text
+  hs-source-dirs:  examples/token
+                    examples/multisig
+
+executable token
+  import:         common-options
+  main-is:        Main.hs
+  build-depends:  base >= 4.14 && < 5
+                , ada-smart-contract-example
+                , aeson
+                , bytestring
+                , containers
+                , plutus-contract
+                , plutus-ledger
+                , plutus-ledger-api
+                , plutus-tx
+                , plutus-tx-plugin
+                , text
+  hs-source-dirs: examples/token
+
+test-suite tests
+  import:         common-options
+  type:           exitcode-stdio-1.0
+  main-is:        Main.hs
+  build-depends:  base >= 4.14 && < 5
+                , ada-smart-contract-example
+                , plutus-tx
+                , plutus-tx-plugin
+                , plutus-contract
+                , tasty
+                , tasty-hunit
+  hs-source-dirs: test
