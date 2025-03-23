@@ -1,0 +1,44 @@
+# Haskell и Cabal
+dist
+dist-*
+cabal-dev
+*.o
+*.hi
+*.hie
+*.chi
+*.chs.h
+*.dyn_o
+*.dyn_hi
+.hpc
+.hsenv
+.cabal-sandbox/
+cabal.sandbox.config
+*.prof
+*.aux
+*.hp
+*.eventlog
+.stack-work/
+cabal.project.local
+cabal.project.local~
+.HTF/
+.ghc.environment.*
+
+# Plutus специфичные
+plutus-*/
+marlowe-*/
+
+# IDE/редакторы
+.idea/
+.vscode/
+*.swp
+*~
+.DS_Store
+
+# Системные файлы
+.directory
+Thumbs.db
+
+# Временные файлы
+temp/
+tmp/
+logs/
